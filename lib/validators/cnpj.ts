@@ -42,6 +42,24 @@ class CNPJValidator {
 
     return cnpjNumbers === cnpjToValidate;
   }
+
+  public generate(formatted?: boolean): string {
+    let cnpjNumbers = '';
+
+    for (let i = 0; i < 12; i += 1) {
+      cnpjNumbers += Math.floor(Math.random() * 9);
+    }
+
+    cnpjNumbers += this.checkDigits(cnpjNumbers.split(''));
+    cnpjNumbers += this.checkDigits(cnpjNumbers.split(''));
+
+    return formatted
+      ? cnpjNumbers.replace(
+          /(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/,
+          '$1.$2.$3/$4-$5',
+        )
+      : cnpjNumbers;
+  }
 }
 
 const cnpjValidator = new CNPJValidator();
