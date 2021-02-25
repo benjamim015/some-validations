@@ -1,7 +1,10 @@
 {
-  "name": "Trabalho 3° bimestre",
+  "name": "Trabalho",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Benjamim <benjamimq015@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "git-commit-msg-linter": "^3.0.0"
+  }
 }
