@@ -1,11 +1,11 @@
 {
-  "name": "Trabalho",
+  "name": "CNPJValidator",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Benjamim <benjamimq015@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest",
+    "test": "jest --passWithNoTests --watch",
     "test:staged": "jest --passWithNoTests"
   },
   "devDependencies": {
