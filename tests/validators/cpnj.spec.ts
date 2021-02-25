@@ -37,4 +37,9 @@ describe('CNPJValidator', () => {
     expect(cnpjValidator.isValid('72753584251007')).toBe(true);
     expect(cnpjValidator.isValid('72.753.584/2510-07')).toBe(true);
   });
+
+  it('should generate a valid CNPJ', () => {
+    expect(cnpjValidator.isValid(cnpjValidator.generate())).toBe(true);
+    expect(cnpjValidator.isValid(cnpjValidator.generate(true))).toBe(true);
+  });
 });
