@@ -1,10 +1,12 @@
 {
-  "name": "CNPJValidator",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "some-validations",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "Benjamim <benjamimq015@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "build": "tsc -p tsconfig.build.json",
     "test": "jest --passWithNoTests --watch",
     "test:staged": "jest --passWithNoTests"
   },
