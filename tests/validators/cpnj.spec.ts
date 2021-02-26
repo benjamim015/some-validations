@@ -1,6 +1,12 @@
 import { cnpjValidator } from '../../lib';
 
 describe('CNPJValidator', () => {
+  it('should returns false if an invalid value is provided', () => {
+    expect(cnpjValidator.isValid('')).toBeFalsy();
+    expect(cnpjValidator.isValid(null)).toBeFalsy();
+    expect(cnpjValidator.isValid(undefined)).toBeFalsy();
+  });
+
   it('should returns false if the length of CNPJ is different from 14', () => {
     expect(cnpjValidator.isValid('invalid_cnpj')).toBe(false);
   });
