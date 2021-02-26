@@ -27,6 +27,10 @@ class CNPJValidator {
     return sum % 11 < 2 ? 0 : 11 - (sum % 11);
   }
 
+  /**
+   * Returns **true** if a valid CNPJ is provided and **false** if it is not valid
+   * @param cnpj The CNPJ to validate
+   */
   public isValid(cnpj: string): boolean {
     const cnpjToValidate = cnpj.replace(/[^\d]+/g, '');
 
@@ -43,6 +47,10 @@ class CNPJValidator {
     return cnpjNumbers === cnpjToValidate;
   }
 
+  /**
+   * Generate a valid CNPJ
+   * @param formatted If true the CNPJ will be formatted (XX.XXX.XXX/XXXX-XX)
+   */
   public generate(formatted?: boolean): string {
     let cnpjNumbers = '';
 
