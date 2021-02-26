@@ -32,6 +32,8 @@ class CNPJValidator {
    * @param cnpj The CNPJ to validate
    */
   public isValid(cnpj: string): boolean {
+    if (!cnpj) return false;
+
     const cnpjToValidate = cnpj.replace(/[^\d]+/g, '');
 
     if (cnpjToValidate.length !== 14) return false;
